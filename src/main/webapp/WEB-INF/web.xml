@@ -35,13 +35,25 @@
 
     <security-constraint>
         <web-resource-collection>
-            <web-resource-name>Forbidden Pattern</web-resource-name>
+            <web-resource-name>Forbidden Resources</web-resource-name>
             <url-pattern>/res/secured/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>Admins</role-name>
         </auth-constraint>
     </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Secured Resources</web-resource-name>
+            <url-pattern>/res/ssl/*</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+
 
     <!-- BASIC login config -->
     <login-config>
