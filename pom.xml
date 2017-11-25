@@ -17,7 +17,7 @@
         <finalName>RestServer</finalName>
     </build>
     
-    <dependencies>
+     <dependencies>
       <dependency>
         <groupId>javax</groupId>
         <artifactId>javaee-api</artifactId>
